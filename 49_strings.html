@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript| Strings and strings method</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Lorem ipsum dolor sit.</h1>
+        <div id="content"></div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ullam quae cum ex reprehenderit beatae tenetur temporibus, fugiat fugit, enim consectetur facilis quam aut aliquam veritatis nesciunt ab, atque quasi dolorum quo doloribus officiis.
+        </p>
+        <script>
+           var string="this";
+            var string='this';
+
+            // can use both double and single quote depending on which code will need to be included in the string
+            var name=" Saransh";
+            var message=" Saransh is a good boy";
+            var channel=" your name";
+            var temp= `${name} is a 'nice' "person" and he has a channel called ${channel}`;
+            //can use both double and single quote in it
+            // console.log(string +name +message);
+            console.log(temp);
+            var len=name.length;
+            console.log(`length of name  is ${len}`);
+            console.log(" sa\\ransh \n is king\t and \b");
+            // they like python line space characters
+            var y= new String("This")
+            console.log(y);
+            document.getElementById('content').innerHTML='<h3> this is an h3 heading</h3>'
+            // inserted element using javascript
+            
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Listing to Events</title>
+</head>
+<style>
+    #btn{
+        padding: 10px 14px;
+        background-color: azure;
+        border: 2px solid black;
+        color: black;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <!-- events means something is happened .. 
+        event has fired means clicking on a button or event
+        example-  button click or sidebar closing
+    context menu
+mouse over /mouse out (mouse got out of some element)
+mousedown/mouseup (mouse button or go up)
+mouse move
+
+submit
+focus (focus on one input tag)
+DOM content loaded
+
+
+transitionend-->
+<div class="container">
+    <h1>this is my heading</h1>
+    <p id="para">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia necessitatibus ipsum libero aspernatur exercitationem sunt possimus, ipsam reprehenderit voluptatum sed pariatur maxime magnam, earum accusamus! Unde perspiciatis aliquid dolores voluptatibus iusto maiores in modi totam qui et? Aliquam eligendi tempore beatae sed quae laborum reprehenderit, nesciunt magnam officia sint reiciendis vel exercitationem porro iste ad fugiat animi, deleniti quasi! Expedita nihil maiores assumenda consectetur facilis! Eaque ipsum iure amet, veritatis earum rem eos repellendus cupiditate accusantium ad dolorem qui est nam consequuntur maxime optio mollitia exercitationem numquam voluptas nostrum reprehenderit perferendis eum a repudiandae. Ratione id illo impedit et iste sint architecto amet obcaecati repellat. Dolorem, quidem dicta fugit explicabo ratione eius unde cum sed fugiat, a repellat vero quaerat incidunt nesciunt officia alias consectetur amet minima possimus molestias sequi voluptate beatae deleniti. Quis iste aliquam inventore, minima soluta quaerat dignissimos. Ratione nemo inventore incidunt eveniet quasi sapiente, optio facilis voluptatem, accusantium explicabo tenetur iste tempora quae corrupti atque earum aspernatur sequi commodi eaque. Porro nemo minus eius aut eum sunt quae consectetur modi aspernatur numquam suscipit accusantium neque deserunt, possimus ad praesentium quidem? Reiciendis odio labore iure placeat quas, cumque suscipit soluta nihil nisi quaerat tenetur numquam eum eaque sapiente quasi tempora aliquam velit hic. Explicabo est dolore repellendus qui exercitationem delectus maxime earum itaque aliquam corrupti maiores ad sequi corporis, perspiciatis culpa eligendi odit! Repellendus cum delectus eum nihil ullam laudantium.
+    </p>
+
+</div>
+<button id="btn" onclick="hide()">Show/Hide</button>
+<!-- can us onevent to define function and get functionality using javascript -->
+<script>
+     let para=document.getElementById('para');
+     para.addEventListener('mouseover', function run(){
+        alert("Mouse inside");
+        
+     });
+     para.addEventListener('mouseout', function run(){
+        alert("Mouse now went outside outside");
+        // console.log can use
+     });
+
+    function hide(){
+        let btn= document.getElementById('btn');
+        let para=document.getElementById('para');
+        // if we not even defien the para the global id automaticallly becomes para
+        // but good practice is defining para
+        if (para.style.display!='none') {
+            
+            para.style.display  ='none';
+        }
+        else{
+            para.style.display='block';
+        }
+    }
+</script>
+</body>
+</html>

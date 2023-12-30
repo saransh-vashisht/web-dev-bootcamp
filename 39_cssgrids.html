@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Tutorial</title>
+    <style>
+        .container{
+            display: grid;
+            /* makes display move in both x and y directions */
+            /* grid-template-columns: 300px 100px 100px;
+            makes three columns of respective sizes */
+            /* grid-template-columns: 300px auto 100px ; */
+            /* auto stes by itself  in space left*/
+            /* grid-template-columns: 1fr 4fr 1fr; */
+
+            /* divide the screen in 1 4 and 1 ratio */
+            grid-template-columns: repeat(3, auto);
+            /* makes the grid repeat over time  */
+            
+            grid-gap: 2rem;
+            /* gives gap between grids */
+
+            
+        }
+        .item{
+            border: 2px solid black;
+            /* height: 100px; */
+            background-color: antiquewhite;
+            padding: 15px 5px;
+            /* width: 100px; */
+        }
+    </style>
+</head>
+<body>
+          <!-- .item{this is item-$}*9
+         -->
+         <div class="container">
+
+             <div class="item">this is item-1</div>
+             <div class="item">this is item-2</div>
+             <div class="item">this is item-3</div>
+             <div class="item">this is item-4</div>
+             <div class="item">this is item-5</div>
+             <div class="item">this is item-6</div>
+             <div class="item">this is item-7</div>
+             <div class="item">this is item-8</div>
+             <div class="item">this is item-9</div>
+             <div class="item">this is item-9</div>
+             <div class="item">this is item-9</div>
+             <div class="item">this is item-9</div>
+             <div class="item">this is item-9</div>
+             <div class="item">this is item-9</div>
+             <div class="item">this is item-9</div>
+             <div class="item">this is item-9</div>
+             <div class="item">this is item-9</div>
+            </div>
+</body>
+</html>

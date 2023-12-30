@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript| Arrow Functions</title>
+</head>
+<body>
+    <div class="container">
+        This is arrow functions tutorial.
+
+    <script>
+        // function greet() {
+        //     console.log("Good Morning");
+        // }
+        // // Arrow Function
+    //    let  greet= ()=> {
+    //         console.log("Good Morning");
+    //     }
+       let  greet= ()=>console.log("Good Morning");
+        
+        // let sum= (a,b)=>{
+        //     return a+b;
+        // };
+            let sum2=(a,b)=> a+b;
+            // only for 2 argument and one return value
+
+            let half= a => a/2;
+            // only for single argument
+        greet();
+        // setTimeout(() => {
+        //     console.log("WE are inside settimeout");
+        // }, 3000);
+        let obj1={
+            greeting: "Good Morning",
+            name: ["Saransh","Rohan","SkillF","SARA"],
+            speak(){
+                this.name.forEach((student) => {
+                    console.log(this.greeting +"yo babies "+ student);
+                });
+                // function find only in his variable and arrow function in the parent and this is also known as lexical this
+            }
+        }
+        obj1.speak();
+    </script>
+</body>
+</html>

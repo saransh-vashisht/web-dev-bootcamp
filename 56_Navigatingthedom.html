@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigating the DOM</title>
+    <!-- DOM= Document Object Model -->
+
+</head>
+<body>
+    <div id="main" class="container">
+        <ul id="Nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>More about us</li>
+            <li>Contact us</li>
+        </ul>
+    </div>
+    <div class="container">
+        Another container
+    </div>
+    <script>
+        let main=document.getElementById('main');
+        console.log(main); 
+        //  got the content of html in Js
+        let nav= document.getElementById('Nav');
+        console.log(nav);
+// can grab the element using id
+// id.innerHTML= <li>dynamic element</li>
+// gets changed by this
+// nav.innerHTML gives all the code in it
+let containers=document.getElementsByClassName('container');
+console.log(containers);
+// can use classes and then use it as array to get elements
+let selector=document.getElementsByClassName('containers');
+// let sel=document.querySelector('.container');
+// console.log("Selector returns ", sel);
+// returns the first class having container
+// let sel=document.querySelector('#Nav');
+// aldo can use id for selector
+// let sel=document.querySelector('#Nav>li');
+// can use it as to acess first li
+let sel=document.querySelectorAll('#Nav>li');
+// now will return all the element with the specified address
+
+console.log("Selector returns ", sel);
+    </script>
+</body>
+</html>

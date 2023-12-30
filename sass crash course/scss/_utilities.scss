@@ -1,0 +1,30 @@
+// this folder is for storing the utilities
+.container{
+    // to push everything to the middle also it is not nested with showcase container cuz it can also be used as an utility class
+    max-width: 1100px;
+    padding: 0px 30px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+// Margin &padding classes
+// to make it available all throughout my project then it's more efficient to make it look like that
+// variable having a list of elements
+$spaceamounts: (1,2,3,4,5);
+// each in loop is similar to the for in loop in the jave and it states for each variable space in spaceamounts list
+@each $space in $spaceamounts {
+    // m-#{} is used to acess each iterations with a number sign 
+    .m-#{$space}{
+        margin: #{$space}rem;
+    }
+    .my-#{$space} {
+        margin: #{$space}rem 0;
+    }
+    .p-#{$space}rem{
+        padding: #{$space}rem;
+
+    }
+    .py-#{$space} {
+        padding: #{$space}rem 0;
+    }
+}

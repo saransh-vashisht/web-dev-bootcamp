@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alignment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Licorice&family=Poppins:wght@100&family=Vujahday+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Licorice", cursive;
+        font-size: x-large;
+      }
+      .container {
+        width: 900px;
+        border: 4px solid salmon;
+        margin: 50px auto;
+        background-color: rgb(243, 223, 205);
+      }
+      .item {
+        border: 3px solid grey;
+        margin: 12px 3px;
+        padding: 12px 3px;
+        background: rgb(156, 176, 236);
+      }
+      #fruits {
+        float: left;
+        width: 48%;
+      }
+      #stationary {
+        /* float: left; */
+        width: 100%;
+        /* clear: both; */
+        clear: both;
+      }
+      #computer {
+        float: right;
+        width: 48%;
+      }
+      p,
+      h3 {
+        text-align: center;
+        /* text-align: left; */
+      }
+      h1 {
+        margin: 23px auto;
+        width: 455px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to my store</h1>
+      <div id="fruits" class="item">
+        <h3>fruits</h3>
+        <p id="fruitspara" class="para">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus
+          fuga doloribus quaerat ea eligendi fugiat reiciendis ipsam eveniet
+          dignissimos, excepturi dolorum culpa sit temporibus facere ab
+          doloremque sed? Hic quisquam soluta inventore minus accusantium! Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate
+          obcaecati veritatis iusto perferendis aperiam consequatur, fugit
+          doloribus. Delectus nesciunt rem natus qui, doloremque saepe ab rerum
+          modi deleniti. Eius quia veritatis adipisci deserunt.
+        </p>
+      </div>
+      <div id="computer" class="item">
+        <h3>Computer</h3>
+        <p id="computerpara" class="para">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus
+          fuga doloribus quaerat ea eligendi fugiat reiciendis ipsam eveniet
+          dignissimos, excepturi dolorum culpa sit temporibus facere ab
+          doloremque sed? Hic quisquam soluta inventore minus accusantium! Lorem
+          ipsum dolor sit, amet consectetur adipisicing elit. Rem vel qui
+          adipisci illo laboriosam voluptas laborum saepe, molestiae molestias,
+          a, dolore eligendi exercitationem nam alias dignissimos? Mollitia
+          dolore ad enim temporibus quidem laudantium praesentium? Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Quos nihil ipsum quisquam
+          quaerat eveniet? Corrupti nulla architecto repellat voluptatem
+          corporis esse omnis debitis minima sed, veritatis tempore. Aliquam
+          tempora cupiditate maiores non itaque quo.
+        </p>
+      </div>
+      <div id="stationary" class="item">
+        <h3>Stationary</h3>
+        <p id="stationarypara" class="para">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus
+          fuga doloribus quaerat ea eligendi fugiat reiciendis ipsam eveniet
+          dignissimos, excepturi dolorum culpa sit temporibus facere ab
+          doloremque sed? Hic quisquam soluta inventore minus accusantium!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

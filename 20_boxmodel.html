@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        /* universal can be overwrite below */
+        body{
+            background-color: rgb(206, 119, 247);
+        }
+       .container{
+           background-color: rgb(205, 117, 223);
+           border: 3px solid red;
+           /* padding:  100px; */
+           /* we can set padding/  margin for top bottom left right  */
+           /*   padding-top:  100px;*/
+           /* padding-bottom:  100px; */
+           /* padding-right:  100px; */
+           /* padding left: 344 px */
+           /* padding: top right bottom left; */
+           /* padding: y(top/bottom) x(left/right) */
+           /* padding: 23px 56px 6px 78px; */
+           /*  can use same inspect in margin  */
+           padding: 34px 19px;
+           margin: 34px;
+           border-radius: 23px;
+           width: 500px;
+           box-sizing: border-box;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3> this is my heading</h3>
+        <p id="firstpara">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, in, libero assumenda similique quo possimus quisquam eum modi cumque, numquam asperiores atque nesciunt.
+        </p>
+    </div>
+    <div class="container">
+        <h3> this is my heading</h3>
+        <p id="secondpara">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, in, libero assumenda similique quo possimus quisquam eum modi cumque, numquam asperiores atque nesciunt.
+        </p>
+    </div>
+    <div class="container">
+        <h3> this is my heading</h3>
+        <p id="thirdpara">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, in, libero assumenda similique quo possimus quisquam eum modi cumque, numquam asperiores atque nesciunt.
+        </p>
+    </div>
+</body>
+</html>

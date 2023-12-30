@@ -1,0 +1,29 @@
+// can use the config file to store any variables and the mixins in it
+// _ in the name tells the compiler that it is going to be compiled with the main file and it is not on his own in  the scss
+
+$light-color: #f4f4f4;
+$font-stack: Arial, Helvetica, sans-serif;
+$primary-color: #0e6cff; //darker color will have light text i.e. white
+// $primary-color: #e0ffff ; lighter color will have dark text i.e. black
+$secondary-color: #ff8700;
+
+// creating an function 
+// set text color based on bg
+@function set-text-color($color) {
+    // making use of if else statements
+    @if(lightness($color) >70){
+        @return #333;
+
+    } @else{
+       @return white;
+    }
+
+}
+
+// Set background and text-color mixin
+// mixin is just like a function but it does not return anything
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color)
+}
+

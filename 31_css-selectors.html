@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors</title>
+
+</head>
+<style>
+    h1{
+        background-color: coral;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+    }
+    /* div li p{
+        color: chocolate;
+        font-weight: bold;
+        background-color: rgb(197, 238, 224);
+    }
+    if p is contained by any li which is contained by p */
+    /* div li p will work only on p inside div and li
+div p will work on all p inside div doesnt matter how much inside they are in the box */
+/* div > p{
+    if p is right inside div then css will be applied
+     will work only ijn direct child of div 
+    color: cornflowerblue;
+    background-color: blanchedalmond;
+    font-weight: bold;
+} */
+
+/* div+p{
+    if p is right after div i.e. p is the next sibling of div
+    color: whitesmoke;
+    background-color: coral;
+
+} */
+/* if div is direct sibling of p then this wil; work */
+</style>
+<body>
+    <h1>This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                
+                <li class="item"><p>This is another paragraph inside li</p></li>
+                <li>THis will not get affected</li>
+                <p>this is another para inside ul</p>
+            </ul>
+            <p>This is a Paragraph</p>
+        </div>
+        <p>This is another paragraph</p>
+    </div>
+    <p>This is outermost paragraph</p>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        .box{
+            background-color: rgb(216, 129, 129);
+            color: black;
+            font-size: 72px;
+            text-align: center;
+            display: none;
+
+        }
+        @media (max-width:300px){
+            #box-1{
+                display: block;
+                background-color: azure;
+            }
+        }
+        @media only screen and  (min-width: 300px) and (max-width:500px) {
+        /* shows only screen type of device */
+            #box-2{
+                display: block;
+                background-color: blueviolet;
+            }
+        }
+        @media  (min-width: 500px) and (max-width:800px) {
+            #box-3{
+                display: block;
+                background-color: rgb(226, 43, 202);
+            }
+        }
+        @media  (min-width: 800px)  {
+            #box-4{
+                display: block;
+                background-color: rgb(81, 255, 13);
+            }
+        }
+        /* copy line down shift+k */
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1">Mai ek Iphone hu</div>
+    <div class="box" id="box-2">Mai ek Tablet hu </div>
+    <div class="box" id="box-3">Mau ek Computer hu</div>
+    <div class="box" id="box-4">Mai ek wide screen computer hu</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+// we don't deploy scss folder they are development files we keep html and css in the build folder
+
+@import 'config';
+
+// all these are partials to avoid one big monolithic file in the css and compile it into one scss folder
+// advantage of sass that we can break our file into various small sizes and treat it as one also it have nesting and also above example was of inheritance that it can be inherited from the scss folder 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background-color: $light-color;
+    font-family: $font-stack;
+    line-height: 1.6;
+
+}
+img{
+    width: 100%;
+
+}
+// this is done to remove the underline of all the links tag i.e. the list items to the none
+a{
+    text-decoration: none;
+}
+.showcase{
+    // background-color: $primary-color;
+    // // this sets the color of the texts of the sentence to the black
+    // color: set-text-color($primary-color);
+    // using the mixin here to get both the values in the text
+    @include set-background($primary-color);
+    height: 600px;
+    // can also put the block that in normal css would be outside it will be fixed inside it through this navbar 
+    // will target all nav tags in the showcase container
+
+     nav{
+        //  display is done flex to align everything horizontal 
+         display: flex;
+        align-items: center;
+        // This is done to align items in the center 
+        // to make both the logo and the ul to have two different sides in it with space in between
+        justify-content: space-between ;
+
+        // Nesting of ul within the showcase and  within the nav
+        ul{
+            // display is done flex to align them in the row format
+         display: flex;
+        //  list style is set none to make it so that the items in list have removed the bullets 
+         list-style-type: none;
+
+        }
+        // li can also be nested inside the ul or also can be doen like this so it nested for all the li in the nav of showcase 
+        // video did it only to make it look more neater 
+
+        li{
+        padding: 15px;
+
+        }
+        // also makes all the links darken
+        a{
+            color: set-text-color($primary-color);
+        }
+        // this makes all the links in the navbar on hover to have the secondary color of orange  
+        a:hover{
+        color: $secondary-color;
+        }
+     }
+    //  this is nested in  showcase section instead of li section to make all the links in the showcase have white color
+    //  this is cutted out bcz it was overwriting our mixin the tabs
+    //  a{
+    //    color: #fff;  
+    //  }
+    //  so instead of using showcase-content we can put it too &-content and compiler will compile it same 
+     &-content{
+        height: 100%;
+        // to get  text in one side and image on other ans split it horizontally 
+        display: flex;
+        align-items: center ;
+        justify-content: center;
+        margin-top: 30px;
+        // changing the width of image for content tab to 50% to make it look even 
+        img{
+            width: 50%;
+        }
+
+        h1{
+          font-size: 50px;
+        //   so that they are not far apart when there are two lines 
+          line-height: 1.2;
+
+        }
+        // p{
+        // //    margin: 20px 0; 
+        // //    setting margin of top and bottom to the 20px size and left and right to the zero
+        // }
+     }
+}
+@import 'utilities';
+@import 'buttons' ;
+@import 'mobile';
+

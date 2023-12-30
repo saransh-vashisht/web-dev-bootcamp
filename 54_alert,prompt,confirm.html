@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> interaction using Alert,Prompt,Confirm</title>
+
+
+</head>
+<body>
+    <div class="container">
+        This is a page
+
+    </div>
+    <script>
+        // alert in-browser javascript
+        // alert("This is a message");
+    //  a=   alert("This is a message");
+        // shows a new window called modal window which we have to remove before acessing it
+        // does not return anythng - undefinedd
+        // console.log(a);
+        // let name=prompt("What is your name?","Guest");
+        // console.log(name);
+        // using second aspect(Attribute) guest is not necessary
+        // can use the user to enter the value
+        // Confirm in JS
+
+let deletePost=confirm("Do you really want to delete this post");
+// console.log(deletePost);
+// ok= true
+// cancel=false
+if(deletePost){
+    // Code to delete the post
+    console.log("Your post has been deleted sucessfully");
+}
+else{
+    // Code to cancel deletion of the post 
+    console.log("Your post has not been deleted");
+}
+// let age = prompt("Please enter your Age", "18");
+// if (age < 18) {
+//             alert("You cannot enter the club");
+//         } 
+// else {
+//             alert("You can enter the club");
+//         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | String Functions</title>
+</head>
+<style>
+
+</style>
+<body>
+    
+    <script>
+        var str="This is a string";
+        console.log(str);
+        //First Occurrence of a Substring
+        var position=str.indexOf('is');
+        console.log(position);
+        
+        //last occurence of a substring
+         position=str.lastIndexOf('is');
+        console.log(position);
+        //Substring from a string
+        var subStr=str.slice(1,5);
+       console.log(subStr);
+        //[) type of ranges
+        var subStr=str.substring(1,5);
+        console.log(subStr);
+        // slice can take negative values but substring can't take negative values
+        var subStr1=str.substr(1,7);
+        console.log(subStr1);
+        // first is where to start and second is the length of it
+        var replaced=str.replace('string', 'saransh');
+        console.log(str);
+        console.log(replaced);
+        // replace the specified word and made a new string 
+        console.log(str.toUpperCase());
+      //  makes the sentence go upppercase
+        console.log(str.toLowerCase());
+        //makes all the letters in the string to go lowercase
+
+        var newString=str.concat('New String');
+        console.log(newString)
+        //concatenate the two strings
+       // or can use + operator
+       var strWithWhitespaces="    this contains whitespaces       ";
+       console.log(strWithWhitespaces)
+       console.log(strWithWhitespaces.trim())
+    //    removes spaces from both start and the end part
+        var char2=str.charAt(2);
+        console.log(char2);
+        //char at position 2
+        var char2=str.charCodeAt(2);
+        console.log(char2);
+        //give the code of object and is not very important
+        console.log(str[2]);
+        //slicing of string can be done 
+
+            </script>
+</body>
+</html>

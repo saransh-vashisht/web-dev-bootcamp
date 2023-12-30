@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript| setTimeout & Cleartimeout</title>
+</head>
+<body>
+    <div class="container">
+        Time now is <span id="time"></span>
+    </div>
+    <script>
+        console.log("This is tutorial 58")
+        // setTimeout - allows us to run the function once after the interval of time
+        // setTimeout - allows us to run the function repeatedly after the interval of time
+        function greet(name, byetext){
+            console.log("Hello Good Morning "+name+ "  "+ byetext);
+
+        }
+       
+        // setTimeout(greet, 5000, "Saransh", "takecare");
+        // 5000=milliseconds and seconds
+        // setTimeout(greet(), 12000);  wrong as it calling the function inside set timeout
+    //  timeOut=   setTimeout(greet, 5000, "Saransh", "takecare");
+    //  console.log(timeOut);
+
+    //  clearTimeout(timeOut);
+    //  will not work now
+    //  clearTimeout(2) can use this to stop timeout and timeout is used for it 
+    // cleartimeout is used   when like we show a window for login after some time but user already logged in to the website then use cleartimeout to avoid settimeout function
+        // setInterval(greet, 1000,"Saransh", "good day");
+        // can use it to make the function run at given times continously
+        intervalId=setInterval(greet, 1000,"Saransh", "good day");
+        clearInterval(intervalId);
+        // by clearInterval will not run the function
+        function displayTime(){
+            time = new Date();
+            console.log(time);
+            document.getElementById('time').innerHTML=time;
+        }
+        setInterval(displayTime, 1000);
+        
+    </script>
+</body>
+</html>
