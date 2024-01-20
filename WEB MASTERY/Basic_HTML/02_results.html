@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+       initial-scale-1.07"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Results</title>
+  </head>
+  <body>
+    <div id="results"></div>
+    <a href="/">Back to Form</a>
+    <script>
+      const resultsList =document.getElementById('results')
+      new URLSearchParams (window.location.search).forEach((value,
+      name) => {
+        resultsList.append(`${name}: ${value}`)
+        resultsList.append(document.createElement('br'))
+      })
+    </script>
+  </body>
+</html>
+
+
+<!-- Explanation of the above code -->
+<!-- 
+Certainly! Let's break down the JavaScript code in your HTML file:
+
+```html
+<script>
+  const resultsList = document.getElementById('results');
+  new URLSearchParams(window.location.search).forEach((value, name) => {
+    resultsList.append(`${name}: ${value}`);
+    resultsList.append(document.createElement('br'));
+  });
+</script> -->
+
+<!-- ```
+
+1. `const resultsList = document.getElementById('results');`: This line gets a reference to the HTML element with the id "results" and stores it in the variable `resultsList`. This element is assumed to be a `<div>` where you want to display the results.
+
+2. `new URLSearchParams(window.location.search)`: This part of the code creates a `URLSearchParams` object from the query parameters in the URL. The query parameters are the values after the "?" in the URL.
+
+3. `.forEach((value, name) => { ... });`: This is a loop that iterates over each key-value pair in the query parameters. The `name` variable will hold the parameter name, and the `value` variable will hold the parameter value.
+
+4. `resultsList.append(`${name}: ${value}`);`: This line appends a string to the `resultsList` div. The string is constructed using a template literal and contains the parameter name followed by a colon and then the parameter value.
+
+5. `resultsList.append(document.createElement('br'));`: This line appends a line break (`<br>`) element to create a new line after each parameter.
+
+In summary, this script takes the query parameters from the URL, formats them as name-value pairs, and then displays them in the "results" div with each pair on a new line. This is commonly used to show the results of a form submission or to display dynamic content based on URL parameters. -->
+
+<!-- Certainly! Let's say you have a form on the previous page, and the user submits the form with the following input values:
+
+- Name: John Doe
+- Email: john@example.com
+- Age: 25
+
+After submitting the form, the user is redirected to the "results.html" page with the URL containing the query parameters:
+
+```
+results.html?name=John%20Doe&email=john%40example.com&age=25
+
+```
+
+Now, the JavaScript code in your "results.html" page processes these parameters and displays them in the "results" div. The updated HTML and JavaScript code would look like this:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results</title>
+  </head>
+  <body>
+    <div id="results"></div>
+    <a href="/">Back to Form</a>
+    <script>
+      const resultsList = document.getElementById('results');
+      new URLSearchParams(window.location.search).forEach((value, name) => {
+        resultsList.append(`${name}: ${value}`);
+        resultsList.append(document.createElement('br'));
+      });
+    </script>
+  </body>
+</html>
+```
+
+The content of the "results" div would be:
+
+```
+name: John Doe
+email: john@example.com
+age: 25
+```
+
+This is just an example to illustrate how the code works. In a real-world scenario, you might have a more complex form with additional fields, and the JavaScript code would adapt to display the submitted data accordingly. -->
+
+

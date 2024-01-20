@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form action="02_results.html" method="GET">
+      <!-- action keyword tells us where our form is submitting too -->
+
+      <!-- after action we are going to specify the get method and this is going to be either get or put request -->
+
+      <!-- get request is going to append things to the url and is going to send things to the another page in our site  -->
+
+      <!-- post -> useful for a server when we want to save some information  but if we don't have a server then it will give us error on using this method
+      -->
+      <div>
+        <label for="name">Name</label>
+        <!-- for attribute highlights our input box in it -->
+        <!-- <input type="text" id="name" name="name" value="User"/> -->
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Username"
+          required
+        />
+        <!-- type specify the what type of input you are using  -->
+        <!-- value tag will set the value to the default and it will set it to be what the value is specified whenever we reset or refresh -->
+        <!-- value tag is really useful when you already know what the value is or you want to default to something that is going to be submitted when you are going to submit the form -->
+        <!-- placeholder appear in lightish tone and it does not get submitted if we click on the submit button -. 
+          placeholder let the user know a little bit of information of what they want to know -->
+
+        <!-- required attribute will make that field that need to be filled to be mandatory for the input. this will avoid the no empty value when we submit the forms -->
+      </div>
+      <div>
+        <!-- another example of input type attribute -->
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <div>
+        <!-- another example of input type attribute ->number -->
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" min="1" max="120" step="5">
+        <!-- it will take in only number  -->
+        <!-- we can also set minimum and max range for it by using min and max attribute -->
+        <!-- step attribute defines by how much value will our element will move forward by clicking on its increase value button-->
+      </div>
+      <div>
+        <!-- another example of input type attribute ->date -->
+        <label for="date">BirthDate</label>
+        <input type="date" name="date" id="date" min="2019-06-10">
+        <!-- we can also set the min and max range for it -->
+      </div>
+      <div>
+        <!-- another example of input type attribute ->checkbox -->
+        Favorite Food
+        <div>
+          <label for="chilli">Chilli Potato</label>
+          <input type="checkbox" name="chilli" id="chilli">
+        </div>
+        <div>
+        <label for="momos">Momos</label>
+        <input type="checkbox" name="momos" id="momos">
+        </div>
+        <!-- in the checkbox we can select multiple values we want - we can use radio button if we want to choose only one value from multiple values -->
+
+      </div>
+      <div>
+        <!-- another example of input type attribute ->radio -->
+        Gender
+        <div>
+          <label for="male">Male</label>
+          <input type="radio" name="Gender" id="male" value="male">
+        </div>
+        <div>
+          <label for="female">Female</label>
+          <input type="radio" name="Gender" id="female" value="female">
+        </div>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <button type="reset">Reset</button>
+      <!-- reset sets the everything back to the default -->
+      <button type="submit">Submit</button>
+      <!-- submit type define that this button is only responsible for submitting the form -->
+    </form>
+  </body>
+</html>
