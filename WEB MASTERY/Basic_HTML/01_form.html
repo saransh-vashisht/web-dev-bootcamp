@@ -6,7 +6,7 @@
     <title>Form</title>
   </head>
   <body>
-    <form action="02_results.html" method="GET">
+    <form action="02_results.html" method="GET" enctype="multipart/form-data">
       <!-- action keyword tells us where our form is submitting too -->
 
       <!-- after action we are going to specify the get method and this is going to be either get or put request -->
@@ -15,6 +15,8 @@
 
       <!-- post -> useful for a server when we want to save some information  but if we don't have a server then it will give us error on using this method
       -->
+
+      <!-- we added the enctype attribute to let us send the file . in this we tell the server that the file is very laarge and it will be sent in the form of the parts so it have to look for the multiple sections of the upload instead of the one single upload. it will allow us to submit our files to our servers -->
       <div>
         <label for="name">Name</label>
         <!-- for attribute highlights our input box in it -->
@@ -42,7 +44,7 @@
       <div>
         <!-- another example of input type attribute ->number -->
         <label for="age">Age</label>
-        <input type="number" name="age" id="age" min="1" max="120" step="5">
+        <input type="number" name="age" id="age" min="1" max="120" step="5" />
         <!-- it will take in only number  -->
         <!-- we can also set minimum and max range for it by using min and max attribute -->
         <!-- step attribute defines by how much value will our element will move forward by clicking on its increase value button-->
@@ -50,7 +52,7 @@
       <div>
         <!-- another example of input type attribute ->date -->
         <label for="date">BirthDate</label>
-        <input type="date" name="date" id="date" min="2019-06-10">
+        <input type="date" name="date" id="date" min="2019-06-10" />
         <!-- we can also set the min and max range for it -->
       </div>
       <div>
@@ -58,26 +60,74 @@
         Favorite Food
         <div>
           <label for="chilli">Chilli Potato</label>
-          <input type="checkbox" name="chilli" id="chilli">
+          <input type="checkbox" name="chilli" id="chilli" />
         </div>
         <div>
-        <label for="momos">Momos</label>
-        <input type="checkbox" name="momos" id="momos">
+          <label for="momos">Momos</label>
+          <input type="checkbox" name="momos" id="momos" />
         </div>
         <!-- in the checkbox we can select multiple values we want - we can use radio button if we want to choose only one value from multiple values -->
-
       </div>
       <div>
         <!-- another example of input type attribute ->radio -->
         Gender
         <div>
           <label for="male">Male</label>
-          <input type="radio" name="Gender" id="male" value="male">
+          <input type="radio" name="Gender" id="male" value="male" />
         </div>
         <div>
           <label for="female">Female</label>
-          <input type="radio" name="Gender" id="female" value="female">
+          <input type="radio" name="Gender" id="female" value="female" />
         </div>
+      </div>
+      <div>
+        <!-- another example of input type ->select 
+        but it does not use the input element-->
+        <label for="eyeColor">Eye Color</label>
+        <select name="eyeColor" id="eyeColor" multiple>
+          <option value="Green">Green</option>
+          <option value="Red" label="Red"></option>
+          <!-- here it allows us to select multiple values to be selected  -->
+          <!--  we can also use multiple attribute to select multiple values at one time -->
+        </select>
+      </div>
+      <div>
+        <!-- another example of input type ->textarea
+        but it does not use the input element-->
+        <label for="bio">Bio</label>
+        <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+      </div>
+      <div>
+        <!-- another example of input type attribute ->hidden -->
+        <!-- they are not showed in the page but they are sent alongside other details as its value 
+        it is useful for some fancy manipulation in the js or on server -->
+        <input type="hidden" name="hidden" value="hi" />
+      </div>
+      <div>
+        <!-- another example of input type attribute ->hidden -->
+        <!-- it lets us choose the file to submit to our browser  and to do this we have to add an attribute enctype in the form  -->
+        <label for="file">File</label>
+        <input type="file" name="file" id="file" />
+      </div>
+      <div>
+        <!-- another example of input type attribute ->phone -->
+        <!-- its for adding the phone number and when we are using it in phone it will give us the numeric keypad instead of the generic keypad to fill this up -->
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" id="phone" />
+      </div>
+      <div>
+        <!-- another example of input type attribute ->url -->
+        <!-- gives fun url keypad -->
+        <label for="url">URL</label>
+        <input type="url" name="url" id="url" />
+      </div>
+      <div>
+        <!-- another example of input type attribute ->hidden -->
+      </div>
+      <div>
+        <!-- another example of input type attribute ->color -->
+        <label for="color">COLOR</label>
+        <input type="color" name="color" id="color" />
       </div>
       <div>
         <label for="password">Password</label>
